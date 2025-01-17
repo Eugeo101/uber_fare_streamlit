@@ -1,10 +1,9 @@
 import streamlit as st
-import time
+import numpy as np
 import pandas as pd
 from datetime import datetime, timedelta
 from geopy.distance import great_circle 
 from sklearn.base import BaseEstimator, TransformerMixin
-import numpy as np
 import joblib
 
 class LogTransfomer(BaseEstimator, TransformerMixin):
@@ -88,7 +87,6 @@ if predict:
 
     # prediction
     with st.spinner():
-        time.sleep(5)
         pred = 'Please enter valid distance'
         if distance != 0:
             pred = np.exp(lr_grid.predict(data).ravel()[0])
