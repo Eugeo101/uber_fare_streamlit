@@ -1,7 +1,6 @@
 streamlit
 numpy
 pandas
-datetime
 geopy 
-sklearn
+scikit-learn
 joblib
